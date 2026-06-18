@@ -1,5 +1,58 @@
-<h1>Hello Good morning</h1>
+<!-- <h1>Hello Good morning</h1>
 <h2>{{name}}</h2>
 <login></login>
 <profile></profile>
-<button (click) ="onClick()">click me</button>
+<button (click) ="onClick()">click me</button> -->
+
+
+<h1> Get and Set Input field</h1>
+<h1>User Name is {{displayname}}</h1>
+<input type ="text" 
+value ="{{name}}"
+(input) ="getName($event)"
+placeholder="Enter user name">
+<br>
+<br>
+<button (click) ="displayName()"> Get Value</button>
+<button (click) ="setName()"> Set name</button>
+<hr>
+<h1> email : {{email}}</h1>
+<input
+type="text" placeholder="enter email" #emailField>
+<button (click) = "getEmail(emailField.value)"> get Email</button>
+<!-- <button (click) = "setEmail(emailField.value)">Set Email</button> -->
+
+<!--  -->
+
+
+<br>
+<br>
+<h1>counter APP</h1>
+<div  style ="text-align: center;">
+    <h1 class ="count">{{count}}</h1>
+    <div>
+    <button   (click) ="handleCount('minus')"  class = "btn bg-red">Decrement </button>
+    <button (click) ="handleCount('reset')" class="btn bg-white">Reset </button>
+    <button (click) ="handleCount('add')" class="btn bg-green">Increment </button>
+    </div>
+</div>
+<div>
+    <button (click) ="handleEvent($event)"  class ="btn"  name ="login">click event</button>
+</div>
+<br>
+<br>
+<!-- <div (mouseenter) ="handleEvent($event)" 
+style="background-color: blueviolet; width: 100px; height: 100px;" 
+class ="abcd" ></div>
+<br>
+<div (mouseleave) ="handleEvent($event)" 
+style="background-color: rgb(57, 207, 31); width: 100px; height: 100px;" 
+class ="abcd" ></div> -->
+
+<br>
+<br>
+<!-- <input type ="text" 
+(focus)="handleEvent($event)" 
+(blur)="handleEvent($event)"
+(input) ="handleEvent($event)" 
+name ="user"> -->
