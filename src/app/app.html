@@ -1,12 +1,21 @@
 
-<h1>
-   signal value {{count}}
-</h1>
-<button  (click) ="updateSignal()">Update signal</button>
-@if(signalDisplay){
-<h1  style ="background-color: brown;"> Heading </h1>
+<h1>Name of people</h1>
+@for(user of users; track user){
+    @if($last || $first){
+<h2 style="background-color: brown;"> this is our {{$index +1}} {{user.name}}  {{user.age}}  {{user.email}}</h2>
+    }
+    @else {
+        <h2> this is our {{$index +1}} {{user.name}}  {{user.age}}  {{user.email}}</h2>
+    }
+    @if($index % 2 ==0){
+        <h2 style="background-color: rgb(180, 133, 224);"> this is our {{$index +1}} {{user.name}}  {{user.age}}  {{user.email}}</h2>
+    }
+    @else {
+        <h2 style="background-color: rgb(46, 158, 57);"> this is our {{$index +1}} {{user.name}}  {{user.age}}  {{user.email}}</h2>
+    }
+  
+  
 }
-
 
 
 

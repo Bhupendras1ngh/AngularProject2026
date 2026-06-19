@@ -10,13 +10,16 @@ import { ProfileComponent } from './profile/profile.component';
   styleUrl: './app.css',
 })
 export class App {
-  constructor(){
-    effect(()=>{
+  constructor() {
+    effect(() => {
       // console.log(this.userName())
-      if(this.count == 2) {this.signalDisplay = true; 
-        setTimeout(()=>{this.signalDisplay =false}, 2000)}
-      else this.signalDisplay =false;
-    })
+      if (this.count == 2) {
+        this.signalDisplay = true;
+        setTimeout(() => {
+          this.signalDisplay = false;
+        }, 2000);
+      } else this.signalDisplay = false;
+    });
   }
   protected readonly title = signal('prelims2026');
   count = 0;
@@ -26,7 +29,7 @@ export class App {
   email = '';
   display = false;
   toggleDiv = true;
-  signalDisplay =false;
+  signalDisplay = false;
   countSignal = signal(10);
   users = [
     { name: 'Sonu', age: 24, email: 'sonu@gmail.com' },
@@ -37,8 +40,8 @@ export class App {
     { name: 'birju', age: 26, email: 'birju@gmail.com' },
   ];
   // showName ="";
-  updateSignal(){
-    this.userName.set(this.count +=1)
+  updateSignal() {
+    this.userName.set((this.count += 1));
     // this.signalDisplay =! this.signalDisplay;
     // console.log(this.signalDisplay())
   }
