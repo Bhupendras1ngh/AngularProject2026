@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile.component';
 // import {signal} from 'rxjs'
+import {NgFor, NgIf} from'@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, ProfileComponent, FormsModule],
+  imports: [RouterOutlet, Login, ProfileComponent, FormsModule ,NgIf, NgFor],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -98,4 +100,6 @@ export class App {
       this.taskList = this.taskList.filter((item)=>item.id != id)
 
     }
+    show =false;
+
 }
