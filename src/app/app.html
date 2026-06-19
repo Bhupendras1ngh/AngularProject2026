@@ -1,4 +1,4 @@
-
+<!-- 
 <h1>Name of people</h1>
 @for(user of users; track user){
     @if($last || $first){
@@ -13,95 +13,14 @@
     @else {
         <h2 style="background-color: rgb(46, 158, 57);"> this is our {{$index +1}} {{user.name}}  {{user.age}}  {{user.email}}</h2>
     }
-  
+  <h1>{{$count}}</h1>
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@empty() {
+    <h1> no record found </h1>
+} -->
+
+<!-- Two Way binding  -->
 
 <!-- <h1>Hello Good morning</h1>
 <h2>{{name}}</h2>
@@ -192,3 +111,11 @@ name ="user"> -->
     </h2>
 
 } -->
+  <!-- two way binding  -->
+
+  <!-- <input [(ngModel)] = "name" type="text" placeholder="enter name ">
+  <h1>{{name}}</h1> -->
+
+  <!-- lengthy method for two wat binding -->
+   <input type="text" (input)="updateName($event)" placeholder="enter the text">
+   <h1> {{name}}</h1>

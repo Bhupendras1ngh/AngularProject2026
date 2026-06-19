@@ -3,9 +3,10 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile.component';
 // import {signal} from 'rxjs'
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, ProfileComponent],
+  imports: [RouterOutlet, Login, ProfileComponent, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -79,5 +80,13 @@ export class App {
   }
   toggleTwo() {
     this.toggleDiv = !this.toggleDiv;
+  }
+
+  updateName(event :Event
+  ){
+    const val = (event.target as HTMLInputElement).value
+    // console.log(val)
+    this.name  =val;
+
   }
 }
