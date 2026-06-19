@@ -111,11 +111,28 @@ name ="user"> -->
     </h2>
 
 } -->
-  <!-- two way binding  -->
+<!-- two way binding  -->
 
-  <!-- <input [(ngModel)] = "name" type="text" placeholder="enter name ">
+<!-- <input [(ngModel)] = "name" type="text" placeholder="enter name ">
   <h1>{{name}}</h1> -->
 
-  <!-- lengthy method for two wat binding -->
-   <input type="text" (input)="updateName($event)" placeholder="enter the text">
-   <h1> {{name}}</h1>
+<!-- lengthy method for two wat binding -->
+<!-- <input type="text" (input)="updateName($event)" placeholder="enter the text">
+   <h1> {{name}}</h1> -->
+
+
+   <!-- Todo List in NAgular  -->
+
+   <h1>To do list</h1>
+   <input  [(ngModel)] ="task" type="text" placeholder="enter text">
+   <button (click)="addTask()">Add task</button>
+
+
+   @for(item of taskList; track item){
+    <ul class="task-list">
+        <li>{{item.id}}</li>
+        <li>{{item.task}}</li>
+        <button (click) ="onDelete(item.id)">Delete</button>
+    </ul>
+      <!-- <h2></h2> -->
+   }

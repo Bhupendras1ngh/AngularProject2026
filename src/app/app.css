@@ -34,3 +34,8 @@
 .abcd{
     cursor: pointer;
 }
+.task-list{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}

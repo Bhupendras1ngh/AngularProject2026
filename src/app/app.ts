@@ -82,11 +82,20 @@ export class App {
     this.toggleDiv = !this.toggleDiv;
   }
 
-  updateName(event :Event
-  ){
-    const val = (event.target as HTMLInputElement).value
+  updateName(event: Event) {
+    const val = (event.target as HTMLInputElement).value;
     // console.log(val)
-    this.name  =val;
-
+    this.name = val;
   }
+
+  task ="";
+  taskList :{id:number, task :string}[] =[];
+  addTask(){
+        this.taskList.push({id : this.taskList.length+1, task :this.task});
+        this.task ="";
+      }
+    onDelete(id :number){
+      this.taskList = this.taskList.filter((item)=>item.id != id)
+
+    }
 }
