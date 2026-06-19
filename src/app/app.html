@@ -1,9 +1,105 @@
+
+<h1>
+   signal value {{count}}
+</h1>
+<button  (click) ="updateSignal()">Update signal</button>
+@if(signalDisplay){
+<h1  style ="background-color: brown;"> Heading </h1>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <h1>Hello Good morning</h1>
 <h2>{{name}}</h2>
 <login></login>
 <profile></profile>
 <button (click) ="onClick()">click me</button> -->
-
+<!-- 
 
 <h1> Get and Set Input field</h1>
 <h1>User Name is {{displayname}}</h1>
@@ -19,12 +115,12 @@ placeholder="Enter user name">
 <h1> email : {{email}}</h1>
 <input
 type="text" placeholder="enter email" #emailField>
-<button (click) = "getEmail(emailField.value)"> get Email</button>
+<button (click) = "getEmail(emailField.value)"> get Email</button> -->
 <!-- <button (click) = "setEmail(emailField.value)">Set Email</button> -->
 
 <!--  -->
 
-
+<!-- 
 <br>
 <br>
 <h1>counter APP</h1>
@@ -40,7 +136,7 @@ type="text" placeholder="enter email" #emailField>
     <button (click) ="handleEvent($event)"  class ="btn"  name ="login">click event</button>
 </div>
 <br>
-<br>
+<br> -->
 <!-- <div (mouseenter) ="handleEvent($event)" 
 style="background-color: blueviolet; width: 100px; height: 100px;" 
 class ="abcd" ></div>
@@ -48,11 +144,42 @@ class ="abcd" ></div>
 <div (mouseleave) ="handleEvent($event)" 
 style="background-color: rgb(57, 207, 31); width: 100px; height: 100px;" 
 class ="abcd" ></div> -->
-
+<!-- 
 <br>
-<br>
+<br> -->
 <!-- <input type ="text" 
 (focus)="handleEvent($event)" 
 (blur)="handleEvent($event)"
 (input) ="handleEvent($event)" 
 name ="user"> -->
+<!-- <h1>{{ count }}</h1>
+<h1>{{ countSignal() }}</h1>
+<button (click)="countSignal.set(100)">Incrrase Signal value</button> -->
+
+<!-- 
+<h1> If Else </h1>
+<button (click) ="hideDiv('on')">hide div</button>
+<button (click) ="hideDiv('off')">show div</button>
+<button (click) ="toggle()"> toggle</button>
+@if(display){
+<div style ="width : 200px;  height:200px; background-color: green;"></div>
+}
+<hr>
+<button (click) ="toggleTwo()"> {{toggleDiv?'Yellow dev':'PinkishRed Div'}}</button>
+@if(toggleDiv){
+  <div style ="background-color: yellow; width : 200px; height: 200px"></div>
+}
+@else {
+     <div style ="background-color: rgb(237, 15, 103); width : 200px; height: 200px"></div>
+}
+
+
+<hr>
+@for(user of users; track user; let id =$index){
+    <h2>{{id}} -
+        <span>name :{{user.name}}</span>
+        <span>age :{{user.age}}</span> 
+        <span>email :{{user.email}}</span> 
+    </h2>
+
+} -->
