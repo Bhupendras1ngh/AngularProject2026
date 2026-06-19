@@ -1,5 +1,5 @@
 import { Component, signal, effect } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile.component';
 // import {signal} from 'rxjs'
@@ -8,7 +8,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, ProfileComponent, FormsModule ,NgIf, NgFor],
+  imports: [RouterOutlet, Login,
+    RouterLink ,RouterOutlet,
+    ProfileComponent, FormsModule ,NgIf, NgFor],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
