@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 @Component({
     selector :'profile',
     // template : '<h1>Profile component</h1>',
@@ -7,5 +8,13 @@ import { Component } from "@angular/core";
     styleUrl :'./profile.component.css'
 })
 export class ProfileComponent{
+    userName :string | null = "";
+ constructor(private route : ActivatedRoute){
 
+ }
+ ngOnInit(){
+    let name  =this.route.snapshot.paramMap.get('name');
+    console.log(name);
+    this.userName =name;
+ }
 }

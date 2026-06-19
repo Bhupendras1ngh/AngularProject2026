@@ -6,10 +6,13 @@ import { ProfileComponent } from './profile/profile.component';
 import {NgFor, NgIf} from'@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Header } from './header/header';
+import { Home } from './home/home';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Login,
     RouterLink ,RouterOutlet,
+    Header,Home,
     ProfileComponent, FormsModule ,NgIf, NgFor],
   templateUrl: './app.html',
   styleUrl: './app.css',
