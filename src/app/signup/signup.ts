@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './signup.html',
   styleUrl: './signup.css',
 })
-export class Signup {}
+export class Signup {
+
+  constructor(){
+    // this.getEmail('Mayank')
+  }
+}

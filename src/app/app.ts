@@ -47,6 +47,7 @@ export class App {
     { name: 'banti', age: 26, email: 'banti@gmail.com' },
     { name: 'birju', age: 26, email: 'birju@gmail.com' },
   ];
+  nameHomeArray =['sonu', 'mayank', 'Golu', 'Bhuonedra']
   // showName ="";
   updateSignal() {
     this.userName.set((this.count += 1));
