@@ -40,12 +40,12 @@ export class App {
   signalDisplay = false;
   countSignal = signal(10);
   users = [
-    { name: 'Sonu', age: 24, email: 'sonu@gmail.com' },
-    { name: 'golu', age: 26, email: 'golu@gmail.com' },
-    { name: 'raghav', age: 26, email: 'golu@gmail.com' },
-    { name: 'vipul', age: 26, email: 'vipul@gmail.com' },
-    { name: 'banti', age: 26, email: 'banti@gmail.com' },
-    { name: 'birju', age: 26, email: 'birju@gmail.com' },
+    {id:'1', name: 'Sonu', age: 24, email: 'sonu@gmail.com' },
+    {id:'2', name: 'golu', age: 26, email: 'golu@gmail.com' },
+    {id:'3', name: 'raghav', age: 26, email: 'golu@gmail.com' },
+    {id:'4', name: 'vipul', age: 26, email: 'vipul@gmail.com' },
+    {id:'5', name: 'banti', age: 26, email: 'banti@gmail.com' },
+    {id:'6', name: 'birju', age: 26, email: 'birju@gmail.com' },
   ];
   nameHomeArray =['sonu', 'mayank', 'Golu', 'Bhuonedra']
   // showName ="";
