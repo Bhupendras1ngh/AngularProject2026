@@ -3,21 +3,32 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { ProfileComponent } from './profile/profile.component';
 // import {signal} from 'rxjs'
-import {NgFor, NgIf} from'@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Header } from './header/header';
 import { Home } from './home/home';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login,
-    RouterLink ,RouterOutlet,
-    Header,Home,
-    ProfileComponent, FormsModule ,NgIf, NgFor],
+  imports: [
+    RouterOutlet,
+    Login,
+    RouterLink,
+    RouterOutlet,
+    Header,
+    Home,
+    ProfileComponent,
+    FormsModule,
+    NgIf,
+    NgFor,
+    ReactiveFormsModule
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
+  formName = new FormControl('Sonu');
+  password = new FormControl('1234');
   constructor() {
     effect(() => {
       // console.log(this.userName())
@@ -40,14 +51,14 @@ export class App {
   signalDisplay = false;
   countSignal = signal(10);
   users = [
-    {id:'1', name: 'Sonu', age: 24, email: 'sonu@gmail.com' },
-    {id:'2', name: 'golu', age: 26, email: 'golu@gmail.com' },
-    {id:'3', name: 'raghav', age: 26, email: 'golu@gmail.com' },
-    {id:'4', name: 'vipul', age: 26, email: 'vipul@gmail.com' },
-    {id:'5', name: 'banti', age: 26, email: 'banti@gmail.com' },
-    {id:'6', name: 'birju', age: 26, email: 'birju@gmail.com' },
+    { id: '1', name: 'Sonu', age: 24, email: 'sonu@gmail.com' },
+    { id: '2', name: 'golu', age: 26, email: 'golu@gmail.com' },
+    { id: '3', name: 'raghav', age: 26, email: 'golu@gmail.com' },
+    { id: '4', name: 'vipul', age: 26, email: 'vipul@gmail.com' },
+    { id: '5', name: 'banti', age: 26, email: 'banti@gmail.com' },
+    { id: '6', name: 'birju', age: 26, email: 'birju@gmail.com' },
   ];
-  nameHomeArray =['sonu', 'mayank', 'Golu', 'Bhuonedra']
+  nameHomeArray = ['sonu', 'mayank', 'Golu', 'Bhuonedra'];
   // showName ="";
   updateSignal() {
     this.userName.set((this.count += 1));
@@ -96,16 +107,22 @@ export class App {
     this.name = val;
   }
 
-  task ="";
-  taskList :{id:number, task :string}[] =[];
-  addTask(){
-        this.taskList.push({id : this.taskList.length+1, task :this.task});
-        this.task ="";
-      }
-    onDelete(id :number){
-      this.taskList = this.taskList.filter((item)=>item.id != id)
+  task = '';
+  taskList: { id: number; task: string }[] = [];
+  addTask() {
+    this.taskList.push({ id: this.taskList.length + 1, task: this.task });
+    this.task = '';
+  }
+  onDelete(id: number) {
+    this.taskList = this.taskList.filter((item) => item.id != id);
+  }
+  show = false;
 
-    }
-    show =false;
-
+  login() {
+ console.log(this.formName.value , this.password.value)
+  }
+  setValue(){
+    this.formName.setValue('Baby')
+    this.password.setValue('9001')
+  }
 }

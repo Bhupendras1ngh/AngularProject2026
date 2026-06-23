@@ -147,10 +147,23 @@ name ="user"> -->
 
 
 <app-header></app-header>
-<h1  class = "headingClick" (click) ="getEmail('Mayank')">Get Name </h1> 
+<!-- <h1  class = "headingClick" (click) ="getEmail('Mayank')">Get Name </h1>  -->
 <!-- <input >
 <!-- @for(user of users; track user){
     <li>{{user.name}} {{user.email}}</li>
 } -->
 
 <router-outlet></router-outlet>
+
+
+<form >
+    <input type="text" placeholder="Enter name " [formControl]="formName">
+    <br>
+    <br>
+    <input type="text" placeholder="Enter password" [formControl] ="password">
+    <br>
+    <br>
+    <button type ="button" (click)="login()">Login</button>
+    <br>
+    <button (click) ="setValue()"> Set values</button>
+</form>
