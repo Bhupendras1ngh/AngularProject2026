@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { RouterLink, Router } from "@angular/router";
 
 @Component({
   selector: 'home',
@@ -7,4 +7,12 @@ import { RouterLink } from "@angular/router";
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home {
+  constructor(private router :Router){
+
+  }
+
+  goToProfile(name :string){
+    this.router.navigate(["/profile",{name :name}])
+  }
+}

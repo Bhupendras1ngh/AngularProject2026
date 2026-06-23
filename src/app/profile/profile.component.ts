@@ -10,11 +10,12 @@ import { ActivatedRoute } from "@angular/router";
 export class ProfileComponent{
     userName :string | null = "";
  constructor(private route : ActivatedRoute){
-
+ 
  }
- ngOnInit(){
-    let name  =this.route.snapshot.paramMap.get('name');
+ ngOnInit(): void { 
+     let name  =this.route.snapshot.paramMap.get('name');
     console.log(name);
-    this.userName =name;
+     this.userName =name;
+     console.log("ngOninit profile called")
  }
 }

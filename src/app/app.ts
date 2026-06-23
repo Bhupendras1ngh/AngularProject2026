@@ -65,7 +65,7 @@ export class App {
   }
   getName(event: Event) {
     this.name = (event.target as HTMLInputElement).value;
-    console.log(name);
+    console.log(this.name);
   }
   displayName() {
     this.displayname = this.name;

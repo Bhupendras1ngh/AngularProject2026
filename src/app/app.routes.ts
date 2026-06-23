@@ -6,9 +6,10 @@ import { Home } from './home/home';
 import { PageNotFound } from './page-not-found/page-not-found';
 
 export const routes: Routes = [
+    {path :'home' , component :Home},
     {path : 'login', component :Login},
     {path : 'profile', component : ProfileComponent},
     {path :'signup' , component :Signup},
-    {path :'home' , component :Home},
+    
     {path :'**' , component : PageNotFound}
 ];
